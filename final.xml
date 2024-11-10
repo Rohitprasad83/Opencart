@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite" verbose="1" parallel="none">
+	<test name="Test">
+		<parameter name="os" value="Windows" />
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="testCases.TC_001_AccountRegistrationTest"/>
+			<class name="testCases.TC_002_LoginTest"/>
+<!--			<class name="testCases.TC_003_LoginDDT"/>-->
+		</classes>
+	</test>
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"/>
+	</listeners>
+
+</suite>
